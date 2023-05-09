@@ -6,7 +6,8 @@ const HeaderContainer = styled.div`
 	background-color: yellow;
 	display: flex;
 	gap: 1rem;
-	justify-content: flex-end;
+	justify-content: space-between;
+	align-items: center;
 	padding: 1rem;
 `;
 
@@ -27,4 +28,8 @@ const StyledLink = styled(NavLink)`
 		color: gray;
 	}
 `;
-export { HeaderContainer, Menu, StyledLink };
+const StyledEmail = styled.div`
+	color: gray;
+`;
+
+export { HeaderContainer, Menu, StyledLink, StyledEmail };

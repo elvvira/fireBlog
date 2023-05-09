@@ -35,7 +35,6 @@ const GlobalStyles = createGlobalStyle`
         border: 1px solid black;
         border-radius: 1rem;
         height: 30px;
-        width: 100px;
     }
     a{
         color: inherit;
