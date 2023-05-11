@@ -4,10 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import { ContainerPost } from './styles';
 import { addDoc } from 'firebase/firestore';
 import { blogCollectionReference } from '../../config/firebase.config';
+import UploadPhoto from '../../components/uploadPhoto/UploadPhoto';
 
 const NewPost = () => {
 	const navigate = useNavigate();
 	const [newPostInfo, setNewPostInfo] = useState({
+		img: '',
 		titulo: '',
 		texto: ''
 	});
@@ -23,6 +25,10 @@ const NewPost = () => {
 	return (
 		<ContainerPost>
 			<form onSubmit={e => createPost(e, newPostInfo, currentUser)}>
+				<UploadPhoto
+					newPostInfo={newPostInfo}
+					setNewPostInfo={setNewPostInfo}
+				></UploadPhoto>
 				<div>
 					<label htmlFor=''>titulo</label>
 					<input

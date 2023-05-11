@@ -11,7 +11,7 @@ const EditModal = ({ setShowEdit, titulo, texto, id }) => {
 
 	return (
 		<EditContainer>
-			<button onClick={e => editPost(e, id, setShowEdit, editInfo)}>x</button>
+			<button onClick={() => setShowEdit(null)}>x</button>
 			<StyledForm action=''>
 				<div>
 					<label htmlFor=''>titulo</label>
@@ -43,7 +43,9 @@ const EditModal = ({ setShowEdit, titulo, texto, id }) => {
 						}
 					/>
 				</div>
-				<button>Subir</button>
+				<button onClick={e => editPost(e, id, setShowEdit, editInfo)}>
+					Subir
+				</button>
 			</StyledForm>
 		</EditContainer>
 	);

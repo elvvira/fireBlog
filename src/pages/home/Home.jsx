@@ -31,14 +31,20 @@ const Home = () => {
 		});
 		return () => subscribeToData();
 	}, []);
+	console.log(posts);
+
 	return (
 		<ContainerHome>
 			<h1>Home</h1>
 			<FlexPosts>
 				{posts.map(post => {
+					// console.log(post.img);
 					return (
 						<ContainerPost key={post.id} onClick={() => getPostById(post.id)}>
-							<PostImg src='' alt='' />
+							<PostImg
+								src={!post.img ? 'public/images/noPhoto.png' : post.img}
+								alt=''
+							/>
 							<h3>{post.titulo}</h3>
 							<p>{post.texto}</p>
 							{currentUser && post.email === currentUser.email && (

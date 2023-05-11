@@ -22,4 +22,5 @@ const StyledInput = styled.input`
 	width: 300px;
 	height: 60px;
 `;
+
 export { EditContainer, StyledInput, StyledForm };
