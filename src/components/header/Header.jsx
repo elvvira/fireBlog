@@ -4,7 +4,7 @@ import { AuthContext } from '../../contexts/Auth.context';
 
 const Header = () => {
 	const { currentUser } = useContext(AuthContext);
-
+ 
 	return (
 		<HeaderContainer>
 			<StyledEmail>{currentUser && currentUser.email}</StyledEmail>
